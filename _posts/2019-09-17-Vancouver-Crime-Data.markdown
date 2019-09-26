@@ -11,8 +11,6 @@ It's been a month since I moved to Vancouver.
 
 
 
-{% endhighlight %}
-
 [Data Source](https://data.vancouver.ca/datacatalogue/crime-data.htm): City of Vancouver Open Data Portal
 
 
