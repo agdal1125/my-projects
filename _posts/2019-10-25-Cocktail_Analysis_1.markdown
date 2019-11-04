@@ -4,6 +4,7 @@ title: Cocktail Recipe Analysis (part.1)
 date: 2019-10-25 
 description: Collecting Cocktail Recipe Data
 img: cocktail_1.jpg
+tags: [Cocktail, Data Collection, Python]
 ---
 ### Initiatives
 
