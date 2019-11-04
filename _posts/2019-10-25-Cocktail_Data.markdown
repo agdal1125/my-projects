@@ -5,8 +5,6 @@ date: 2019-10-25
 description: Collecting Cocktail Recipe Data
 img: cocktail_1.jpg
 ---
-## Cocktail Recipe Analysis  (part. 1)
-
 ### Initiatives
 
 Drinking alcohol is a great way of breaking ice, networking with people. As a person who has a fairly low tolerance on alcohol, I prefer drinking cocktails over other types of drinks. They look fancy, come in many different flavors, and contains enough alcohol to let my shy personality go off for a while. 

@@ -1,14 +1,14 @@
-title: Hello! This is a special blog for my projects
+title: Jaekeun's Projects
 description: > # this means to ignore newlines until "baseurl:"
   Jaekeun Lee's projects.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://agdal1125.github.io/my-projects" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://agdal1125.github.io/my-projects/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
-author: Jake Lee # add your name
+author: Jaekeun Lee # add your name
 author-img: jake.jpg # add your photo
-about-author: I am a Data Scientist. Craving for novel methodologies and anything relevant to Data Analysis. # add description
+about-author: I am a Data Scientist.\n Craving for novel methodologies and anything related to Data Analysis. # add description
 social-facebook: thisjaekeun # add your Facebook handle
 social-github: agdal1125 # add your Github handle
 social-linkedin: jaekeun-jake-lee-9b8a67bb/ # add your Linkedin handle
