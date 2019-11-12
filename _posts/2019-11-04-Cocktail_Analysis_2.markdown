@@ -46,7 +46,7 @@ print(df.shape)
 df.head()
 ```
 
-<img src="/assets/img/cocktail2_output_1.png" width="600" height="350">
+<img src="/my-projects/assets/img/cocktail2_output_1.png" width="600" height="350">
 
 <br>
 
