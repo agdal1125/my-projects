@@ -46,7 +46,7 @@ print(df.shape)
 df.head()
 ```
 
-<img src="/assets/img/cocktail2_output_1.png" width="700" height="400">
+<img src="/assets/img/cocktail2_output_1.png" width="600" height="350">
 
 <br>
 
@@ -128,3 +128,4 @@ print(no_numbers[:20])
 > ```
 
 835 different number of units exist here. Well let's search for the patterns. By context, we know that "ozgrated" is "oz grated" and "mlchilled" is "ml chilled". There are different ways to measure liquid: ounce(oz), milileter(ml), centileter(cl), tablespoon (tsbp), teaspoon (tsp), etc. Other than the listed measurements seems like units describing garnishes in cocktails. 
+
