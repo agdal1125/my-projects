@@ -60,9 +60,7 @@ $$ where:  \\ \bullet \ \ n = \text{a finite size of ingredients in corpus after
 
 This model can capture combination of pairs of ingredients frequently used together in the cocktail recipes. However, it does not take ratio of ingredients into account. To resolve this problem, we can use cosine similarity and calculate distance with weighted word vectors, like the illustration below:
 
-<img src="/assets/img/cosine_cockt.jpg">
-
-
+![cosine]({{site.baseurl}}/assets/img/cosine_cockt.jpg)
 
 
 
