@@ -233,6 +233,75 @@ Finally, I made a converting function to unify different units in the ingredient
 
 <br>
 
+```python
+def unit_unify(list_of_texts):
+    """
+    Takes a list of strings that contains liquid units, and convert them into fluid ounces.
+    
+    @Params
+    - list_of_texts: list of str
+    
+    @Returns
+    - list of str
+    
+    @Example:
+    [ln] >> detector(["1 oz", "2ml", "4cup"])
+    [Out] >> ["1 oz", "0.067628 oz", "32 oz"]
+    """
+    import re # use regex to find units
+    
+    # Defining re pattern
+    pattern = r"(^[\d -/]+)(oz|ml|cl|tsp|teaspoon|tea spoon|tbsp|tablespoon|table spoon|cup|cups|qt|quart|drop|drops)"
+    
+    # Create Empty list to store refined data
+    new_list = []
+    
+    
+    # Search
+    for text in list_of_texts:
+        re_result = re.search(pattern, text)
+        
+        # If there is a matching result
+        if re_result:
+            # Seperate the matched pattern into two groups: amount(numbers), unit(measurement)
+            amount = re_result.group(1).strip()
+            unit = re_result.group(2).strip()
+
+            # Convert all unit into oz
+            ### Checking range in values 
+            if "-" in amount:
+                ranged = True
+            else:
+                ranged = False
+            
+            ### Replace non digit characters to plus sign
+            ###### Dealing with exception type1: (1 /12 oz should be 1/12 oz)
+            amount = re.sub(r"(\d) (/\d)",r"\1\2",amount) 
+            amount = amount.replace("-","+").replace(" ","+").strip()
+            ###### Dealing with exception type2: (1 - 2 produces 1+++2)
+            amount = re.sub(r"[+]+","+",amount)
+            ### Split them and add
+            amount_in_dec = frac_to_dec_converter(amount.split("+"))
+            amount = np.sum(amount_in_dec)
+            
+            if ranged:
+                to_oz = (amount*liquid_units[unit])/2
+            else:
+                to_oz = amount*liquid_units[unit]
+
+            # append refined string to the new list
+            new_list.append(str(round(to_oz,2))+" oz")
+
+        else:
+            new_list.append(text)
+            
+    return new_list
+```
+
+
+
+<br>
+
 Using the functions created above, our data can be processed:
 
 ```python
