@@ -16,7 +16,7 @@ Let's start with Recommendation System.
 
 <br>
 
-### Ideas for Cocktail Recommendation System
+## Ideas for Cocktail Recommendation System
 
 There are several types of recommendation system depending on how it suggests or defines "relevant" items to people. Two major categories exists to define the "relevancy": **Collaborative Filtering Method** and **Content Based Method**. The diagram below is to facilitate illustration of the two methods.
 
@@ -31,7 +31,7 @@ TL;DR: We can build a Content Based Recommendation System **based on the similar
 
 <br>
 
-#### Examples of Computing Similarity
+### Examples of Computing Similarity
 
 Now the complication of the recommendation system lies on how to compute distance between cocktail recipes. 
 
@@ -48,19 +48,35 @@ Among the many methods of measuring similarity which one should we adopt? Should
 
 <br>
 
-### Defining "Similar Cocktails"
+## Defining "Similar Cocktails"
 
 When you call something similar, the notion is based on resemblance of specific features. When we say two cocktails are "similar", it refers to the taste, color or ingredients that they share. As our data includes neither taste nor color, we need to make the most out of ingredients. Because flavor depends on the ingredients, we can hope our model to capture the information. For example, Jack and Coke consists of whiskey (Jack Daniel mostly) and coke. Cuba Libre is a mixture of rum and coke. Because the two shares a common ingredient coke, we can expect the two cocktails to be similar in taste. However, the important idea is that the ratio of ingredient should be similar. 0.5oz of coke would not contribute to the flavor as much as 1oz of coke to a 2oz drink. 
 
-We can use Word Mover's Distance to define distance between two cocktails as below:
+We can use **Word Mover's Distance** (WMD) to define the distance between two cocktails as below:
 
 $$Distance_{A,B} =\min_{T\ge0} \sum_{i,j=1}^{n}T_{ij}c(i,j)$$
 
 $$ where:  \\ \bullet \ \ n = \text{a finite size of ingredients in corpus after word2vec embedding}\\\bullet\ T_{ij} = \text{how much of ingredient}\ i\ \text{in Cocktail A travels to ingredient}\ j\ \text{in Cocktail B} \\\bullet\ \sum_{j=1}^{n}T_{ij} = CocktailA_{i^{th}ingredient}, \ \forall i \in \{1,2,...,n\} \\ \bullet\ \sum_{i=1}^{n}T_{ij} = CocktailB_{j^{th}ingredient} , \ \forall j \in  \{1,2,...,n\} \\\bullet\ c(i,j) = cost \ of \ traveling \ from \ one \ ingredient \ to\ another$$
 
-This model can capture combination of pairs of ingredients frequently used together in the cocktail recipes. However, it does not take ratio of ingredients into account. To resolve this problem, we can use cosine similarity and calculate distance with weighted word vectors, like the illustration below:
 
-![cosine]({{site.baseurl}}/assets/img/cosine_cockt.jpg)
+
+The WMD model can capture combination of pairs of ingredients frequently used together in the cocktail recipes. However, it does not take ratio of ingredients into account. To resolve this problem, we can use **cosine similarity** and calculate distance by averaging the sum of weighted word vectors, like the illustration below:
+
+![cosine]({{site.baseurl}}/assets/img/cosine_cockt.jpg =700x)
+
+The distance/similarity between two cocktails can be computed as the approaches introduced above. We can use ensemble method to use several different models for better performance. Average ranking of the closest cockatils can be retrieved from the results of different distance models, and adopted as our final index for cocktail recommendation.
+
+![recommendation engine diagram]({{site.baseurl}}/assets/img/cocktail_recommend_diagram.jpg =700x)
+
+<br>
+
+## Implementation
+
+### Word Mover's Distance (WMD)
+
+
+
+### Cosine Similarity using BERT Embedding
 
 
 
