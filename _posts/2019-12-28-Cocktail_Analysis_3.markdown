@@ -62,21 +62,44 @@ $$ where:  \\ \bullet \ \ n = \text{a finite size of ingredients in corpus after
 
 The WMD model can capture combination of pairs of ingredients frequently used together in the cocktail recipes. However, it does not take ratio of ingredients into account. To resolve this problem, we can use **cosine similarity** and calculate distance by averaging the sum of weighted word vectors, like the illustration below:
 
-![cosine]({{site.baseurl}}/assets/img/cosine_cockt.jpg =700x)
+![cosine]({{site.baseurl}}/assets/img/cosine_cockt.jpg )
 
 The distance/similarity between two cocktails can be computed as the approaches introduced above. We can use ensemble method to use several different models for better performance. Average ranking of the closest cockatils can be retrieved from the results of different distance models, and adopted as our final index for cocktail recommendation.
 
-![recommendation engine diagram]({{site.baseurl}}/assets/img/cocktail_recommend_diagram.jpg =700x)
+![recommendation engine diagram]({{site.baseurl}}/assets/img/cocktail_recommend_diagram.jpg)
 
 <br>
 
 ## Implementation
 
+### Preparation
+
+Now that we have our methodology, let's code it. We can use our recipe instructions as documents to train our embedding model.
+
+```python
+# Loading the instructions
+with open("./pickle_data/cocktail_recipe_instructions.pickle", "rb") as i:
+    cocktail_instructions = pickle.load(i)
+
+documents = list(cocktail_instructions.values())
+documents[5:10]
+```
+
+> ```
+> ['Mix the rum, pepsi vanilla and grenadine in a cup and serve chilled, or mix the grenadine and rum in a shot glass and drop into a cup of pepsi vanilla.',
+>  'Stir together in a highball glass filled with ice cubes, and serve.',
+>  "Out of a 20 oz bottle of Mountain Dew, empty enough of it so that the bottle's contents are directly below the first bump line from the top. Fill to the top with Smirnoff raspberry twist vodka. Mix lightly and enjoy.",
+>  'In a tall mixing glass muddle limes with the agave nectar. Add 1800Â® Silver tequila and ice then shake vigorously. Strain over fresh ice into a Collins glass and top with Agavero. Garnish with a lime wheel.',
+>  'In a tall mixing glass filled with ice add 1800Â® Silver Tequila and all ingredients. Shake vigorously and strain into a chilled martini glass. Garnish with a slice of lime']
+> ```
+
+
+
 ### Word Mover's Distance (WMD)
 
 
 
-### Cosine Similarity using BERT Embedding
+### Cosine Similarity using Word2Vec
 
 
 

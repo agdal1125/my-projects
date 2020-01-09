@@ -115,6 +115,7 @@ done = []
 
 # Dictionary to save our results
 cocktail_recipes = {}
+cocktail_instructions = {}
 
 # Loop through the 12334 links we have collectee
 for one_url in cocktail_links:
@@ -123,7 +124,7 @@ for one_url in cocktail_links:
     # Cocktail name
     cocktail_name = driver.find_element_by_class_name("recipe_title").text
 
-    # Cocktail Recipe
+    # Cocktail Recipe (Ingredients)
     cocktail_recipe = driver.find_element_by_class_name("recipe_data").find_elements_by_class_name("ingredient")
     
     recipe_dict = {} # Recipe of one cocktail
@@ -133,9 +134,14 @@ for one_url in cocktail_links:
         ing_name = ingrdnt.find_element_by_class_name("name").text
 
         recipe_dict[ing_name] = amount
-    
-    # Save one cocktail recipe to the whole recipe dictionary
+
+    cocktail_inst = driver.find_element_by_xpath("//*[@class='RecipeDirections instructions']")
+      
+    # Save one cocktail ingredients and instruction to dictionary
     cocktail_recipes[cocktail_name] = recipe_dict
+		cocktail_instructions[cocktail_name] = cocktail_inst.text.strip()
+    
+    # Adding finished url to check consistancy
     done.append(one_url)
 ```
 
@@ -177,6 +183,9 @@ with open("./pickle_data/list_of_cocktail_names.pickle", "wb") as b:
     
 with open("./pickle_data/cocktail_recipe_dict.pickle", "wb") as c:
     pickle.dump(cocktail_recipes, c)
+    
+with open("./pickle_data/cocktail_recipe_instructions.pickle", "wb") as d:
+    pickle.dump(cocktail_instructions, d)
 ```
 
 We saved our data. Let's double check whether the loaded data is consistent with what we have.
@@ -195,9 +204,13 @@ with open("./pickle_data/cocktail_recipe_dict.pickle", "rb") as k:
 with open("./pickle_data/cocktail_recipe_dict.pickle", "rb") as l:
     cocktail_recipes2 = pickle.load(l)
     
+with open("./pickle_data/cocktail_recipe_instructions.pickle", "rb") as m:
+    cocktail_instructions2 = pickle.load(m)
+    
 assert cocktail_links == cocktail_links2
 assert cocktail_name_list == cocktail_name_list2
 assert cocktail_recipes == cocktail_recipes2
+assert cocktail_instructions == cocktail_instruction2
 
 print("Everything is Fine")
 ```
