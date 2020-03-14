@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PPUCHA: Prenatal Public Chair Reservation System
+title: PPUCHA (Prenatal Public Chair Reservation System)
 date: 2018-11-03
 description: A System to ensure that priority seats are reserved to pregnant mothers
 img: ppucha_logo.png
