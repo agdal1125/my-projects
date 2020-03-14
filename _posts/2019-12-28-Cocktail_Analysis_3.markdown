@@ -81,8 +81,11 @@ Now that we have our methodology, let's code it. We can use our recipe instructi
 with open("./pickle_data/cocktail_recipe_instructions.pickle", "rb") as i:
     cocktail_instructions = pickle.load(i)
 
-documents = list(cocktail_instructions.values())
-documents[5:10]
+df = pd.read_csv("recipe_cleaned_v1.csv", index_col=0, dtype=str)
+df = df.fillna("0")
+
+recipe_documents = list(cocktail_instructions.values())
+recipe_documents[5:10]
 ```
 
 > ```
@@ -95,13 +98,21 @@ documents[5:10]
 
 
 
-### Word Mover's Distance (WMD)
+```python
+
+```
 
 
 
-### Cosine Similarity using Word2Vec
+### Cosine Similarity using SBERT Embeddings
 
 
 
+```python
+from bert_embedding import BertEmbedding
 
+ingredients_list = list(df.index)
+bert_embedding = BertEmbedding()
+result = bert_embedding(ingredients_list)
+```
 

@@ -1,0 +1,36 @@
+---
+layout: post
+title: PPUCHA: Prenatal Public Chair Reservation System
+date: 2018-11-03
+description: A System to ensure that priority seats are reserved to pregnant mothers
+img: ppucha_logo.png
+tags: [IoT, Social Innovation, Public Chair Service, Authentification, Pressure Sensor] 
+---
+<br>
+
+## PPUCHA
+
+PPUCHA, or the Prenatal PUblic CHAir, was developed by Jakeun Lee, Hyeyoung Ryu, Se Jeen Park, and Soohyun Kim to help alleviate some of the struggles pregnant women face in the public sphere, particularly on subways. 
+
+Many argue that the current priority seats are inefficient, as they prevent people from sitting down when there are no pregnant women on board. In order to address these concerns, the developers of PPUCHA set out to design a system that will allow non-pregnant users to sit down, while simultaneously inducing them to yield their seat when a pregnant woman boards the train. PPUCHA utilizes the KakaoTalk Chatbot/Plus Friend system and barcode scanners to ensure that expecting mothers will be able to sit. The media content that plays in the back will socially “shame” nonpregnant users to give up their seats when a pregnant user scans their codes. In addition, the development team of PPUCHA created a website ([www.ppucha.herokuapp.com](http://www.ppucha.herokuapp.com/)), which can be accessed via a QR code, to share information on healthcare, laws, and social benefits in place for pregnant women.
+
+<br>
+
+<img src="./assets/img/ppucha2.png">
+
+
+
+<img src="../assets/img/ppucha2.png">
+
+
+
+<img src="/img/ppucha2.png">
+
+
+
+<img src="./assets/img/ppucha2.png">
+
+
+
+<img src="/assets/img/ppucha2.png">
+
