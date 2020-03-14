@@ -16,21 +16,55 @@ Many argue that the current priority seats are inefficient, as they prevent peop
 
 <br>
 
-<img src="./assets/img/ppucha2.png">
+<br>
+
+## The Problem
+
+PPUCHA solves two primary social problems: convenience of the expecting mothers and the uncomfortableness of the passengers who yield their seats. 
+
+The visualization below depicts the degree of uncomfortable experience that expecting mothers have faced during their pregnancy. Surprisingly, 56% of respondents said that their experiences in public transportation were inconvenient. Also, 60% of expecting mothers haven't had the experience of being yielded on public transportation.
+
+<br>
+
+<img src="../assets/img/ppucha0_1.png">
+
+<br>
+
+Some passengers do not yield their seats intentionally. PPUCHA tries to encourage these people to yield their seats using indirect public shame and give a sense of pressure.
+
+<br>
 
 
+
+<img src="../assets/img/ppucha0_2.png">
+
+<br>
+
+<br>
+
+## How It Works
+
+PPUCHA solves these problems by securing the seats for expecting mothers while less aggressively socially shaming the non-pregnant passengers who are sitting on PPUCHA via the back display. 
+
+Expecting mothers are given customized barcodes through the KakaoTalk chatbot. In addition to the visual exhibition, we have prepared a website (ppucha.herokuapp.com) that can be accessed via the given QR code.
 
 <img src="../assets/img/ppucha2.png">
 
+<br>
 
+<br>
 
-<img src="/img/ppucha2.png">
+## Final Prototype
 
+#### Authentification Process
 
+When pregnant mothers enter their personal information, the information will be encrypted and processed into a unique barcode image. The barcode can be used as an authentification method to claim priority seats in the public transportation.
 
-<img src="./assets/img/ppucha2.png">
+<img src="../assets/img/ppucha_chat.jpeg">
 
+<br>
 
+#### Installation Example
 
-<img src="/assets/img/ppucha2.png">
+<img src="../assets/img/ppucha_3.jpg">
 
