@@ -23,11 +23,13 @@ There are several types of recommendation system depending on how it suggests or
 <img src="https://www.researchgate.net/profile/Lionel_Ngoupeyou_Tondji/publication/323726564/figure/fig5/AS:631605009846299@1527597777415/Content-based-filtering-vs-Collaborative-filtering-Source.png">
 
 <p style="font-size:7pt; text-align:center;"> source: : https://www.themarketingtechnologist.co/building-a-recommendation-engine-for-geeksetting-up-the-prerequisites-13/ </p>
-Collaborative Filtering Method requires interaction data between users and items. In our case, it would be the rating data of cocktail by drinkers, which we do not have at this moment. To make use of our cocktail ingredient data, we should adopt Content Based Method; **we can recommend a similar cocktail to the ones that the drinker may have liked in the past, based on their ingredients**. Now, the problem we must solve is how to define and compute the similarity between cocktails. 
+Collaborative Filtering Method and Content-based Filtering Method both require interaction data between users and items (Utility Matrix). In our case, it would be the rating data of cocktail by drinkers, which we do not have at this moment. 
+
+To make use of our cocktail ingredient data, we should adopt a specific step of Collaborative Filtering Method called **Item-Item Memory Based Collaborative Filtering**; **we can recommend a similar cocktail to the ones that the drinker may have liked in the past, based on their ingredients**. Now, the problem we must solve is how to define and compute the similarity between cocktails. 
 
 The most accepted way of representing similarity is computing distance between two entities. Let's ponder on how friends represent one's characteristics in this quote  "Your friends are a reflection of your own personality". We can say that "close" friends share similar characteristics. Family members who are usually closer than your friends even look similar. Taking this analogy into account, **we can define similarity as the distance between entities.** (Smaller the distance, closer the two elements are and the more similar they are) 
 
-TL;DR: We can build a Content Based Recommendation System **based on the similarity between cocktail recipes measured by distance.**
+TL;DR: We can build a Item-Item Memory based Recommendation System **based on the similarity between cocktail recipes measured by distance.**
 
 <br>
 
