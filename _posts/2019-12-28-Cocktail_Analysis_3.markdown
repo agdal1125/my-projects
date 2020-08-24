@@ -169,39 +169,39 @@ def sim_drinks_30(drink):
 sim_drinks_30("Jack_and_Coke")
 ```
 
-```
-Jillian's_Yankee        0.999889
-Jack's_Vanilla_Coke     0.999803
-Jake_Cocktail           0.999024
-Fuck_You_#2             0.997343
-Carmel_Coke             0.995880
-Cokaretto               0.995880
-Jim_Rogers              0.995128
-Bloody_Jack             0.995015
-Evil_Jake               0.994219
-Golden_Coke             0.993891
-Hammer_&_Nail           0.993663
-Old_Rootbeer_Float      0.992896
-Laze_on_the_Deck        0.992487
-Licorice_Vyos           0.992119
-Assassin                0.991627
-Dark_Indulgence         0.991202
-Doc_Harris              0.991098
-Pirate's_Treasure       0.990712
-Jim_Beam_and_Coke       0.990603
-Bacardi_Vanilla_Coke    0.990021
-Bloody_Jim              0.989592
-Beam_Me_Up              0.989308
-Mist_and_Cola           0.989273
-Jack_and_Cherries       0.987447
-Candy_Cane_Cola         0.987273
-Orange_Warthog          0.987147
-Hennessy_and_Coke       0.987083
-Black_Cherry_Coke       0.986790
-Mexican_Riptide         0.986513
-Kirsch_Cuba_Libre       0.985931
-Name: Jack_and_Coke, dtype: float64
-```
+> Jillian's_Yankee        0.999889
+> Jack's_Vanilla_Coke     0.999803
+> Jake_Cocktail           0.999024
+> Fuck_You_#2             0.997343
+> Carmel_Coke             0.995880
+> Cokaretto               0.995880
+> Jim_Rogers              0.995128
+> Bloody_Jack             0.995015
+> Evil_Jake               0.994219
+> Golden_Coke             0.993891
+> Hammer_&_Nail           0.993663
+> Old_Rootbeer_Float      0.992896
+> Laze_on_the_Deck        0.992487
+> Licorice_Vyos           0.992119
+> Assassin                0.991627
+> Dark_Indulgence         0.991202
+> Doc_Harris              0.991098
+> Pirate's_Treasure       0.990712
+> Jim_Beam_and_Coke       0.990603
+> Bacardi_Vanilla_Coke    0.990021
+> Bloody_Jim              0.989592
+> Beam_Me_Up              0.989308
+> Mist_and_Cola           0.989273
+> Jack_and_Cherries       0.987447
+> Candy_Cane_Cola         0.987273
+> Orange_Warthog          0.987147
+> Hennessy_and_Coke       0.987083
+> Black_Cherry_Coke       0.986790
+> Mexican_Riptide         0.986513
+> Kirsch_Cuba_Libre       0.985931
+> Name: Jack_and_Coke, dtype: float64
+
+
 
 It seems that the recommendation system is pretty successful at retrieving drinks with similar ingredients! However, this system is not very effective. People would want drinks that have similar taste or vibe. Variations of a drink won't be always satisfying. This is why we need utility matrix and user-item rating information to create a better recommendation system.
 
