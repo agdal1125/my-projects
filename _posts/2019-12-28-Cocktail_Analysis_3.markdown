@@ -52,7 +52,7 @@ Among the many methods of measuring similarity which one should we adopt? Should
 
 When you call something similar, the notion is based on resemblance of specific features. When we say two cocktails are "similar", it refers to the taste, color or ingredients that they share. As our data includes neither taste nor color, we need to make the most out of ingredients. Because flavor depends on the ingredients, we can hope our model to capture the information. For example, Jack and Coke consists of whiskey (Jack Daniel mostly) and coke. Cuba Libre is a mixture of rum and coke. Because the two shares a common ingredient coke, we can expect the two cocktails to be similar in taste. However, the important idea is that the ratio of ingredient should be similar. Depending on the total amount of cocktail, 0.5oz of coke may or may not influence the overall taste.
 
-<img src="/my-projects/assets/img/cosine_cockt.png" width="600" height="350"> 
+<img src="/my-projects/assets/img/cosine_cockt.jpg" width="600" height="350"> 
 
 <br>
 
